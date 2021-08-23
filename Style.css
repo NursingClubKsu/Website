@@ -1,0 +1,22 @@
+.logo{
+    width: 60px !important; 
+    height: 90px !important;
+   }
+.nav-li{
+    font-weight: 100;
+    font-size: 18px;
+ }
+  .nav-li:hover{
+    opacity: 70%;
+ }
+.icons{
+    height: 22px;
+    width: 22px; 
+ }
+ .icons:hover{
+    opacity: 70%;
+    cursor: pointer;
+ }
+ #sidemenu-btn{
+    box-shadow: none !important;
+  }

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nursing Club | اللجان والعضوية </title>
+    <link href="Style.css" rel="stylesheet">
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+      }
+      body{
+        margin:0;
+        padding:0;
+        background-size: contain;
+        background-image: linear-gradient(to right bottom, #182848, #182b50, #192e57, #1a305f, #1b3367, #1f386f, #223c76, #26417e, #2d4987, #335291, #3a5a9a, #4063a4);
+        background-attachment: fixed;
+        min-height: 100%;
+        font-family: 'Cairo' !important; 
+      }
+     footer{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 0;
+     }
+     .accordion-item{
+       border-radius: 0px !important;
+       border: 0px !important
+     }
+     .accordion-button:not(.collapsed){
+      color: #141414 !important; 
+      background-color: #ffffff !important;
+     }
+     .accordion-button:focus {
+         box-shadow: none !important;    
+     }
+     .card-header-style{
+      background: rgb(219,219,219);
+      background: linear-gradient(205deg, rgba(219,219,219,1) 0%, rgba(255,255,255,0.7105217086834734) 100%);
+     }
+     .card-title{
+       color: #1D3671;
+     }
+     .card{
+       border: none !important;
+     }
+     .buttons-style{
+       background: rgb(219,219,219);
+       background: linear-gradient(205deg, rgba(219,219,219,1) 0%, rgba(255,255,255,0.7105217086834734) 100%);
+       color: #1D3671;
+       border-radius: 30px;
+       border-style: none;
+       padding-left: 2rem;
+       padding-right: 2rem;
+       padding-top: 0.5rem;
+       padding-bottom: 0.5rem;
+       box-shadow: 0 4px 10px 0 #375896;
+     }
+     .join-btn:hover{
+       opacity: 85%;
+     }
+     @media (max-width: 767px){
+       footer{
+         position: relative;
+       }
+     }
+   
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    <link  href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   </head>
+   <script>
+    function checkMediaQuery() {
+        if (window.innerWidth < 992) {
+          document.getElementById('KSULogo').src = 'Images/ClubLogo.PNG';
+          document.getElementById('KSULogo').style.setProperty('width', '140px', 'important');
+          document.getElementById('KSULogo').style.setProperty('height', '82px', 'important');
+          $('#ClubLogo').hide();
+          
+        
+        }
+        else{
+          document.getElementById('KSULogo').src = 'Images/KSUlogo.PNG';
+          document.getElementById('KSULogo').style.width = 'auto'
+          document.getElementById('KSULogo').style.height = 'auto'
+          $('#ClubLogo').show();
+          document.getElementById("closebtn").click()
+         
+        }
+    }
+     $(document).ready(function() {
+         checkMediaQuery();
+      });
+      window.addEventListener('resize', checkMediaQuery);
+
+  </script>
+<body>
+    
+    <header class="container-fluid header mt-3">
+      <nav class="col-lg-10 col-md-11 col-sm-12 navbar navbar-expand-lg m-auto">
+       
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="Images/KSUlogo.PNG" id="KSULogo" class="logo"></a>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav h6 p-0" dir="rtl">
+              <li class="nav-item">
+                <a class="nav-link nav-li text-white" href="index.html">الرئيسية&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="About.html">عن النادي&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="#">اللجان والعضوية&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="Activities.html">البرامج والأنشطة&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="ClubStructure.html">هيكلة النادي&nbsp;</a>
+              </li>
+            </ul>
+          </div>
+          <a href="index.html"><img src="Images/ClubLogo.PNG" id="ClubLogo" style="width: 152px; height: 87px;"></a>
+
+          <button class="navbar-toggler float-left" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation" id="sidemenu-btn">
+            <span class="navbar-toggler-icon text-white">&#9776;</span>
+          </button>
+
+        </div>
+
+         <!---------------Canvas---------------->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="closebtn"></button>
+          </div>
+          <div class="offcanvas-body navbar-light"> 
+            <ul class="container navbar-nav h6 text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">الرئيسية</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item mr-1">
+                <a class="nav-link"  href="About.html">عن النادي</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="#">اللجان والعضوية</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="Activities.html">البرامج والأنشطة</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="ClubStructure.html">هيكلة النادي</a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+         <!-------------------------------------->  
+      </nav>
+    </header>
+    
+
+    <!-- Begin page content -->
+    <main>
+      <div class="p-2"></div>
+      <div class="container col-12 col-md-10 mt-5 pt-5 d-flex flex-column align-items-center pb-5 mb-5">
+         <div class="container-fluid row justify-content-around">
+          <div class="card p-0 mb-xl-auto mb-5" style="width: 30rem;" dir="rtl">
+            <div class="card-header card-header-style"> 
+               <h2 class="p-2 card-title">اللجنة الإعلامية</h2>
+            </div>
+            <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <label>مهام اللجنة&nbsp;&nbsp;</label>
+                      </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ol>
+                        <li>
+                          تغطية فعاليات النادي في جميع وسائل التواصل الاجتماعي.
+                        </li>
+                        <li>
+                          التصوير الفوتوغرافي والفديو والمونتاج.
+                        </li>
+                        <li>
+                          التصاميم (الإعلانات،المطويات،البوسترات).
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card p-0 mb-xl-auto mb-5" style="width: 30rem;" dir="rtl">
+              <div class="card-header card-header-style"> 
+                 <h2 class="p-2 card-title">لجنة الفعاليات والرعايات</h2>
+              </div>
+              <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+               <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                          <label>مهام اللجنة&nbsp;&nbsp;</label>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ol>
+                          <li>
+                            إستقطاب الفعاليات الخارجية.
+                          </li>
+                          <li>
+                            التواصل مع الجهة المسؤولة للمشاركة في الفعاليات المطروحة لديهم.
+                          </li>
+                          <li>
+                            البحث عن رعاه لفعاليات وأنشطة النادي والتواصل معهم.
+                          </li>
+                        </ol>
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+              <div class="col-12 p-xl-5 p-0"></div>
+            <div class="card p-0 mb-xl-auto mb-5" style="width: 30rem;" dir="rtl">
+              <div class="card-header card-header-style"> 
+                 <h2 class="p-2 card-title">لجنة العلاقات العامة</h2>
+              </div>
+              <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                          <label>مهام اللجنة&nbsp;&nbsp;</label>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ol>
+                          <li>
+                            حلقة الوصل بين النادي والجهات الخارجية والداخلية.
+                          </li>
+                          <li>
+                            عمل تصاريح لدخول وخروج مستلزمات الفعاليات.
+                          </li>
+                          <li>
+                            عمل تقرير لكل فعالية مدّعم بالصور.
+                          </li>
+                          <li>
+                            توثيق الشهادات من قبل عمادة شؤون الطلاب.
+                          </li>
+                          <li>
+                            كتابة الخطة الأسبوعية للنادي.
+                          </li>
+                          <li>
+                            إنشاء نماذج التسجيل للفعاليات والأنشطة.
+                          </li>
+                          <li> 
+                            جمع إحصائيات الأنشطة.
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card p-0 mb-xl-auto mb-5" style="width: 30rem;" dir="rtl">
+                <div class="card-header card-header-style"> 
+                   <h2 class="p-2 card-title">لجنة الدعم اللوجستي</h2>
+                </div>
+                <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            <label>مهام اللجنة&nbsp;&nbsp;</label>
+                          </button>
+                      </h2>
+                      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                          <ol>
+                            <li>
+                              لجنة الدعم الأساسي للنادي في كافة لجانه وأنشطته الداخلية والخارجية.
+                            </li>
+                            <li>
+                              تجهيز متطلبات وإحتياجات جميع الفعاليات.
+                            </li>
+                            <li>
+                              التأكد من إعادة مستلزمات النادي بعد كل فعالية إلى مكانها.
+                            </li>
+                            <li>
+                              جرد وتنظيم المخزن.
+                            </li>
+                            <li>
+                              تسليم الشهادات الموثقة إلى الأعضاء.
+                            </li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-0 p-lg-5"></div>
+              <div class="container d-flex align-items-center flex-column mt-5 pt-5">
+                <img src="Images/jigsaw.png" class="img-fluid" style="width: 100px; height: 100px;" data-aos="zoom-in-down">
+                <p class="text-light mt-5 lead text-center col-lg-7" dir="rtl" data-aos="zoom-in-down">
+                  الكثير مِّنا يكتشف الجانب الخفيّ منه متأخرًا، الجانب الذي يفتح لنا آفاق واسعة ! 
+                  <br>
+               نادي التمريض يُرحب بإنضمامكم لبيئة صُنعت منكم وإليكم
+                <br>
+                </p>
+                <label class="mt-lg-4 mt-3 text-light lead text-center" dir="rtl" data-aos="zoom-in-down">-نتمنى للجميع تجربة فريدة وواعدة بالنجاح والإبداع-</label>
+                <div class="container d-flex flex-row justify-content-evenly mt-5 flex-wrap">
+                  <a href="https://docs.google.com/forms/d/1bjxDvIMWZyYXFbU3dmUNsYv-OYddVvoWtTooFb3Rvg0/viewform?ts=61213714&edit_requested=true" class="join-btn"><button class="buttons-style h5" data-aos="zoom-in-up">الانضمام للطالبات</button></a>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSeT5_cmFIdGoiN167F4paIWrliAYJNdM6dn7uQl63kVvdppWw/viewform" class="join-btn"><button class="buttons-style h5" data-aos="zoom-in-up">الانضمام للطلاب</button></a>
+                </div>
+              </div>
+          </div>
+    </main>
+    <!------------------------->
+
+    <footer class="footer footer-default pb-2">
+      <div class="container d-flex col-6 col-md-3 col-lg-3 col-xl-2 col-sm-4 justify-content-between justify-content-md-evenly">
+        <a href="https://twitter.com/NursingClub"><img src="Images/twitter.png" class="icons"></a>
+        <a href="mailto:Nursingclubgirls@gmail.com"><img src="Images/gmail.png" class="icons"></a>
+        <a href="https://story.snapchat.com/@NursingClub"><img src="Images/snapchat.png" class="icons"></a>
+        <a href="https://t.me/nursingclub_ksu"><img src="Images/telegram.png" class="icons"></a>
+        <a href="#"><img src="Images/youtube.png" class="icons"></a>
+        <a href="https://www.instagram.com/nursingclub/"><img src="Images/instagram.png" class="icons"></a>
+      </div>
+  </footer>
+</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>

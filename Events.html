@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nursing Club | الفعاليات </title>
+    <link href="Style.css" rel="stylesheet">
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+      }
+      body{
+        margin:0;
+        padding:0;
+        background-size: contain;
+        background-image: linear-gradient(to right bottom, #182848, #182b50, #192e57, #1a305f, #1b3367, #1f386f, #223c76, #26417e, #2d4987, #335291, #3a5a9a, #4063a4);
+        background-attachment: fixed;
+        min-height: 100%;
+        font-family: 'Cairo' !important; 
+      }
+     footer{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      bottom: 1%;
+     }
+     .Event2img{
+       width: 300px;
+       height: 120px;
+     }
+   
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    <link  href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   </head>
+   <script>
+    function checkMediaQuery() {
+        if (window.innerWidth < 992) {
+          document.getElementById('KSULogo').src = 'Images/ClubLogo.PNG';
+          document.getElementById('KSULogo').style.setProperty('width', '140px', 'important');
+          document.getElementById('KSULogo').style.setProperty('height', '82px', 'important');
+          $('#ClubLogo').hide();
+          
+        
+        }
+        else{
+          document.getElementById('KSULogo').src = 'Images/KSUlogo.PNG';
+          document.getElementById('KSULogo').style.width = 'auto'
+          document.getElementById('KSULogo').style.height = 'auto'
+          $('#ClubLogo').show();
+          document.getElementById("closebtn").click()
+         
+        }
+    }
+     $(document).ready(function() {
+         checkMediaQuery();
+      });
+      window.addEventListener('resize', checkMediaQuery);
+
+  </script>
+<body>
+    
+    <header class="container-fluid header mt-3">
+      <nav class="col-lg-10 col-md-11 col-sm-12 navbar navbar-expand-lg m-auto">
+       
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="Images/KSUlogo.PNG" id="KSULogo" class="logo"></a>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav h6 p-0" dir="rtl">
+              <li class="nav-item">
+                <a class="nav-link nav-li text-white nav-li" href="index.html">الرئيسية&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="About.html">عن النادي&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="Members.html">اللجان والعضوية&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="Activities.html">البرامج والأنشطة&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="ClubStructure.html">هيكلة النادي&nbsp;</a>
+              </li>
+            </ul>
+          </div>
+          <a href="index.html"><img src="Images/ClubLogo.PNG" id="ClubLogo" style="width: 152px; height: 87px;"></a>
+
+          <button class="navbar-toggler float-left" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation" id="sidemenu-btn">
+            <span class="navbar-toggler-icon text-white">&#9776;</span>
+          </button>
+
+        </div>
+
+         <!---------------Canvas---------------->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="closebtn"></button>
+          </div>
+          <div class="offcanvas-body navbar-light"> 
+            <ul class="container navbar-nav h6 text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">الرئيسية</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item mr-1">
+                <a class="nav-link"  href="About.html">عن النادي</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="#">اللجان والعضوية</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="Activities.html">البرامج والأنشطة</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="ClubStructure.html">هيكلة النادي</a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+         <!-------------------------------------->  
+      </nav>
+    </header>
+    
+
+    <!-- Begin page content -->
+    <main>
+      <div class="container col-12 col-lg-10 col-xl-9 mt-5 pt-5 mb-3 pm-5 d-flex flex-column align-items-center">
+       <div class="container-fluid row justify-content-center">
+        <h3 class="text-light text-center display-5 mb-5 pb-5">الفعاليات</h3>
+          <div class="card mb-5 p-0" style="max-width: 900px;">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body" dir="rtl">
+                  <h5 class="card-title">مبادرة زيارة الأطفال المنومين في المدينة الطبية الجامعية</h5>
+                  <div class="dropdown-divider mb-4"></div>
+                  <p class="card-text p-0 m-0">مبادرة تمّ إطلاقها من قِبل سعادة عميد كلية التمريض االدكتورة مي الراشد وبمشاركة طلبة التمريض لزيارة الأطفال المنومين بالمسشفى خلال الإجازة الصيفية و تقديم الهدايا لهم.</p>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100 p-0">
+                    <div class="carousel-item p-0 h-100 active">
+                      <img src="Images/Event1.JPG" class="d-block w-100 h-100 " alt="...">
+                    </div>
+                    <div class="carousel-item p-0 h-100">
+                      <img src="Images/Event1-2.jpg" class="d-block w-100 h-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-5 p-0" style="max-width: 900px;">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body" dir="rtl">
+                  <h5 class="card-title"> حملة التوعية بالفحص المبكر لسرطان الثدي</h5>
+                  <div class="dropdown-divider mb-4"></div>
+                  <p class="card-text p-0 m-0">حملة توعوية عن أهمية الكشف المبكر لسرطان الثدي وأهمية الفحص الذاتي الشهري شارك فيها العديد من طالبات نادي التمريض ومختلف النوادي بحضور سمو الأميرة هيفاء الفيصل "رئيسة مجلس إدارة جمعية زهرة لسرطان الثدي".</p>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100 p-0">
+                    <div class="carousel-item p-0 h-100 active">
+                      <img src="Images/Event2-1.jpg" class="d-block w-100 h-100 Event2img" alt="...">
+                    </div>
+                    <div class="carousel-item p-0 h-100">
+                      <img src="Images/Event2-2.jpg" class="d-block w-100 h-100 Event2img" alt="...">
+                    </div>
+                    <div class="carousel-item p-0 h-100">
+                      <img src="Images/Event2-3.jpg" class="d-block w-100 h-100 Event2img" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-5 p-0" style="max-width: 900px;" data-aos="fade-left" data-aos-duration="0.3s" data-aos-delay="0.1s">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body" dir="rtl">
+                  <h5 class="card-title">فعالية يوم التمريض الخليجي (بادر معنا)</h5>
+                  <div class="dropdown-divider mb-4"></div>
+                  <p class="card-text p-0 m-0">فعالية أُقيمت في المدينة الطبية الجامعية هدفها هو تعريف مهنة التمريض وتاريخ نشئتها ومراحل تطورها حول دول الخليج مع توضيح إنجازات التمريض الخليجي وأهدافه ، تمّت هذه الفعالية بمشاركة العديد من المستشفيات ومشاركة طلبة نادي المريض بعدّة أركان توضّح أقسام ورؤية مهنة التمريض.</p>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100 p-0">
+                    <div class="carousel-item p-0 h-100 active">
+                      <img src="Images/Event3-1.jpeg" class="d-block w-100 h-100" alt="...">
+                    </div>
+                    <div class="carousel-item p-0 h-100">
+                      <img src="Images/Event3-2.jpg" class="d-block w-100 h-100" alt="...">
+                    </div>
+                    <div class="carousel-item p-0 h-100">
+                      <img src="Images/Event3-3.jpg" class="d-block w-100 h-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-5 p-0" style="max-width: 900px;" data-aos="fade-left" data-aos-duration="0.3s" data-aos-delay="0.1s">
+            <div class="row g-0">
+              <div class="col-md-8">
+                <div class="card-body" dir="rtl">
+                  <h5 class="card-title">حملتيّ خلوها سلبية والموجة الثانية</h5>
+                  <div class="dropdown-divider mb-4"></div>
+                  <p class="card-text p-0 m-0">حملات مجتمعية تثقيفية عن الوقاية من فايروس كورونا المستجد تم فيها توزيع أكثر من 1000 حقيبة مجهزة بالأدوات المخصصة للتعقيم الشخصي على مرتادي المراكز التجارية بالرياض.</p>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex">
+                <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner h-100 p-0">
+                    <div class="carousel-item p-0 h-100 active">
+                      <img src="Images/Event4-1.jpg" class="d-block w-100 h-100" alt="...">
+                    </div>
+                    <div class="carousel-item p-0 h-100">
+                      <img src="Images/Event4-2.jpeg" class="d-block w-100 h-100" alt="...">
+                    </div>
+                    <div class="carousel-item p-0 h-100">
+                      <img src="Images/Event4-3.jpeg" class="d-block w-100 h-100" alt="...">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+       </div>
+      </div>
+    </main>
+    <!------------------------->
+
+    <footer class="footer footer-default pb-2">
+      <div class="container d-flex col-6 col-md-3 col-lg-3 col-xl-2 col-sm-4 justify-content-between justify-content-md-evenly">
+        <a href="https://twitter.com/NursingClub"><img src="Images/twitter.png" class="icons"></a>
+        <a href="mailto:Nursingclubgirls@gmail.com"><img src="Images/gmail.png" class="icons"></a>
+        <a href="https://story.snapchat.com/@NursingClub"><img src="Images/snapchat.png" class="icons"></a>
+        <a href="https://t.me/nursingclub_ksu"><img src="Images/telegram.png" class="icons"></a>
+        <a href="#"><img src="Images/youtube.png" class="icons"></a>
+        <a href="https://www.instagram.com/nursingclub/"><img src="Images/instagram.png" class="icons"></a>
+      </div>
+  </footer>
+</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nursing Club | الدورات</title>
+    <link href="Style.css" rel="stylesheet">
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+      }
+      body{
+        margin:0;
+        padding:0;
+        background-size: contain;
+        background-image: linear-gradient(to right bottom, #182848, #182b50, #192e57, #1a305f, #1b3367, #1f386f, #223c76, #26417e, #2d4987, #335291, #3a5a9a, #4063a4);
+        background-attachment: fixed;
+        font-family: 'Cairo' !important; 
+      }
+     footer{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      bottom: 1%;
+     }
+     .images{
+       height: 350px;
+     }
+     @media (max-width: 767px){
+       footer{
+         position: relative;
+       }
+     }
+     @media (min-width: 768px) and (max-width: 992px){
+     .md-height{
+        min-height: 438px !important;
+      }
+      .md-height2{
+        min-height: 478px !important;
+      }
+     }
+    </style>
+    <script src="jquery-3.5.1.min.js"></script>
+    <link rel="shortcut icon" href="Images/favicon.png" type="image/x-icon">
+    <link  href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;400&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   </head>
+   <script>
+    function checkMediaQuery() {
+        if (window.innerWidth < 992) {
+          document.getElementById('KSULogo').src = 'Images/ClubLogo.PNG';
+          document.getElementById('KSULogo').style.setProperty('width', '140px', 'important');
+          document.getElementById('KSULogo').style.setProperty('height', '82px', 'important');
+          $('#ClubLogo').hide();
+          
+        
+        }
+        else{
+          document.getElementById('KSULogo').src = 'Images/KSUlogo.PNG';
+          document.getElementById('KSULogo').style.width = 'auto'
+          document.getElementById('KSULogo').style.height = 'auto'
+          $('#ClubLogo').show();
+          document.getElementById("closebtn").click()
+         
+        }
+    }
+     $(document).ready(function() {
+         checkMediaQuery();
+      });
+      window.addEventListener('resize', checkMediaQuery);
+
+  </script>
+<body>
+    
+    <header class="container-fluid header mt-3">
+      <nav class="col-lg-10 col-md-11 col-sm-12 navbar navbar-expand-lg m-auto">
+       
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="Images/KSUlogo.PNG" id="KSULogo" class="logo"></a>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav h6 p-0" dir="rtl">
+              <li class="nav-item">
+                <a class="nav-link nav-li text-white nav-li" href="index.html">الرئيسية&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="About.html">عن النادي&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="Members.html">اللجان والعضوية&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="Activities.html">البرامج والأنشطة&nbsp;</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white nav-li" href="ClubStructure.html">هيكلة النادي&nbsp;</a>
+              </li>
+            </ul>
+          </div>
+          <a href="index.html"><img src="Images/ClubLogo.PNG" id="ClubLogo" style="width: 152px; height: 87px;"></a>
+
+          <button class="navbar-toggler float-left" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation" id="sidemenu-btn">
+            <span class="navbar-toggler-icon text-white">&#9776;</span>
+          </button>
+
+        </div>
+
+         <!---------------Canvas---------------->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close" id="closebtn"></button>
+          </div>
+          <div class="offcanvas-body navbar-light"> 
+            <ul class="container navbar-nav h6 text-center">
+              <li class="nav-item">
+                <a class="nav-link" href="#">الرئيسية</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item mr-1">
+                <a class="nav-link"  href="About.html">عن النادي</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="#">اللجان والعضوية</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="Activities.html">البرامج والأنشطة</a>
+              </li>
+              <span class="dropdown-divider col-6 m-auto"></span>
+              <li class="nav-item">
+                <a class="nav-link" href="ClubStructure.html">هيكلة النادي</a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+         <!-------------------------------------->  
+      </nav>
+    </header>
+    
+
+    <!-- Begin page content -->
+    <main>
+      <div class="container col-12 col-md-10 col-lg-11 col-xl-9 mt-5 pt-5 mb-3 pb-5 d-flex flex-column align-items-center" dir="rtl">
+        <h3 class="text-light text-center display-5 mb-5 pb-5">الدورات</h3>
+        <div class="container-fluid row justify-content-center gy-5">
+        
+          <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-md-1" style="min-height: 430px" dir="rtl">
+            <img src="Images/Session1.jpg" class="card-img-top" style="height: 290px">
+            <div class="card-body d-flex">
+              <h6 class="names align-self-end">المهام الأساسية للممرض والمجالات المختلفة للتمريض</h6>
+            </div>
+            
+            <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading11">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapse11">
+                        <div class="col-5"></div>
+                      </button>
+                  </h2>
+              <div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" dir="rtl">
+                  <p class="p-2">تحدثت الدورة عن المهام المختلفة الموجودة في مجال التمريض واتجاه المملكة العربية السعودية لأدوار ومهام التمريض الذي يستطيع أن يشغلها كل ممرض بحسب شهاداته و رتبته مع توضيح كل رُتبه بدئًا من أخصائي التمريض إلى استشاري التمريض.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-lg-1" style="min-height: 430px" dir="rtl">
+            <img src="Images/Session2.jpg" class="card-img-top" style="height:300px">
+            <div class="card-body d-flex">
+              <h6 class="names align-self-end">First Aid And BLS </h6>
+            </div>
+            
+            <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        <div class="col-5"></div>
+                      </button>
+                  </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" dir="rtl">
+                  <p class="p-2">تم تعريف الطالبات والطلاب بأهم النقاط التي يجب عليهم معرفتها والتي ستساعدهم بشكل كبير على المعرفة والإلمام بكيفية اسعاف أوانقاذ المصاب بتوقف القلب أو الرئتين ، تضمنت الدورة مقدمة عن الموضوع ، المفهوم ، الأسباب المؤدية إلى حدوثه ، وكيفية القيام بإسعاف / إنعاش المصاب بتوقف القلب او الرئتين.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          
+          <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-md-1 offset-lg-0" style="min-height: 430px" dir="rtl">
+            <img src="Images/Session3.jpg" class="card-img-top">
+            <div class="card-body d-flex">
+              <h6 class="names align-self-end">تعلمناها لخدمتك</h6>
+            </div>
+            
+            <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <div class="col-5"></div>
+                      </button>
+                  </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" dir="rtl">
+                  <p class="p-2">تحدثت الدورة عن طرق وأساليب التعامل والتواصل مع الصم والبكم من خلال التفاعل الاجتماعي معهم بتعلم لغة الإشارة ، وطرق التواصل: (الأسلوب الشفهي ، الإشارات اليدوية ، قراءة الشفاه و التلميحات ، ابجدية الأصابع) و مشاركة احد الصم في سرد احدى القصص بشكل جميل.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+         
+          <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-lg-1 md-height" style="min-height: 400px;" dir="rtl">
+            <img src="Images/Session4.jpg" class="card-img-top">
+            <div class="card-body d-flex">
+              <h6 class="names align-self-end">البحث العلمي</h6>
+            </div>
+            
+            <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        <div class="col-5"></div>
+                      </button>
+                  </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" dir="rtl">
+                  <p class="p-2">يُعتبرالبحث العلمي في التمريض مهم و يستمر حتى التخرج, فتمّت مناقشة طرق تعلم كتابته وأهميته و كل المصطلحات المتعلقة به التي ستساعد الطلاب والطالبات في كتابة بحوثهم القائمة والجديدة وتزيد من مستواهم وإتقانهم في مجال البحوث العلمية.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+         
+          <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-md-1" style="min-height: 400px" dir="rtl">
+            <img src="Images/Session5.jpg" class="card-img-top" style="height: 250px;">
+            <div class="card-body d-flex">
+              <h6 class="names align-self-end">القبالة</h6>
+            </div>
+            
+            <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading12">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapse12">
+                        <div class="col-5"></div>
+                      </button>
+                  </h2>
+              <div id="flush-collapse12" class="accordion-collapse collapse" aria-labelledby="flush-heading12" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" dir="rtl">
+                  <p class="p-2">تعريف أهم مميزات تخصص القبالة في التمريض وخدماته لزيادة مستوى الوعي لدى طالبات القبالة وسردت د.ابتسام الجحلان قصتها التي تضمنت النجاحات والتحديات والصعوبات التي واجهاتها مما أدى الى تكوين شخصيتها ونجاحها في عدة جهات وتطرقها لموضوع برنامج القبالة ودراسته.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          
+          <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3" style="min-height: 400px" dir="rtl">
+            <img src="Images/Session6.jpg" class="card-img-top">
+            <div class="card-body d-flex">
+              <h6 class="names align-self-end">سنة الإمتياز</h6>
+            </div>
+            
+            <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading6">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
+                        <div class="col-5"></div>
+                      </button>
+                  </h2>
+              <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body" dir="rtl">
+                  <p class="p-2">سنة الامتياز في التمريض تكمن اهميتها بعد التخرج ، ومعرفة كل التجارب والمعلومات المتعلقة بها تحفز الطلاب والطالبات في العمل والإصرار لتحقيق النجاح المنشود فيها بإذن لله ، فتمّت مناقشة أهمية سنة الإمتياز وكيفية تحديد المشفى المناسب على حسب هدف كل طالب وطالبة وأيضًا تم ذِكر تجارب ومعلومات بعض الدكاترة الملهمين.</p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+        <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-md-1" style="min-height: 455px" dir="rtl">
+          <img src="Images/Session7.jpg" class="card-img-top img-fluid" style="height: 320px;">
+          <div class="card-body d-flex">
+            <h6 class="names align-self-end">طرق المذاكرة الصحيحة لمواد التخصص</h6>
+          </div>
+          
+          <div class="dropdown-divider mb-0 mt-0 pt-0 w-100"></div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <div class="col-5"></div>
+                    </button>
+                </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" dir="rtl">
+                <p class="p-2">تعريف أهمية المذاكرة الصحيحة لمواد التخصص وتوعية الطلاب والطالبات بطرق وأساليب المذاكرة الصحيحة .</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-lg-1 d-flex flex-column" style="min-height: 455px" dir="rtl">
+          <img src="Images/Session8.jpg" class="card-img-top align-self-center pt-4 mt-4" style="height: 270px;">
+          <div class="card-body d-flex">
+            <h6 class="names align-self-end">المستقبل المهني لمهنة التمريض </h6>
+          </div>
+          
+          <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading10">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse10" aria-expanded="false" aria-controls="flush-collapse10">
+                      <div class="col-5"></div>
+                    </button>
+                </h2>
+            <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" dir="rtl">
+                <p class="p-2">تفعيل محاضرة المستقبل المهني لمهنة التمريض لتحفيز وتثقيف الطلاب والطالبات بالمستقبل المهني ولإطلاعهم على مستجدات برامج الامتياز.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-md-1 offset-lg-0 md-height2" style="min-height: 455px" dir="rtl">
+          <img src="Images/Session9.jpg" class="card-img-top">
+          <div class="card-body d-flex">
+            <h6 class="names align-self-end">صناعة الفديو للمبتدئين</h6>
+          </div>
+          
+          <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading9">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse9" aria-expanded="false" aria-controls="flush-collapse9">
+                      <div class="col-5"></div>
+                    </button>
+                </h2>
+            <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" dir="rtl">
+                <p class="p-2">تمّت هذه الدورة بإعداد وتقديم طلبة التمريض لمدة ٣ أيام وساهمت في شرح وتوضيح نقاط عديدة للمهتمين في مجال التصوير وصناعة الفديو من حيث المونتاج وعلم الألوان ومبادئ التصوير وتم توضيح محاور عامة في صناعة الفديو والتصميم.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-lg-1 md-height" style="min-height: 485px" dir="rtl">
+          <img src="Images/Session10.JPEG" class="card-img-top">
+          <div class="card-body d-flex">
+            <h6 class="names align-self-end">الرسم الرقمي</h6>
+          </div>
+          
+          <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading13">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapse13">
+                      <div class="col-5"></div>
+                    </button>
+                </h2>
+            <div id="flush-collapse13" class="accordion-collapse collapse" aria-labelledby="flush-heading13" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" dir="rtl">
+                <p class="p-2">الرسم الرقمي او الرسم الحاسوبي هو عملية رسم الصور واللوحات باستخدام أدواتٍ إلكترونيةٍ وتطبيقاتٍ خاصة بدلًا من استخدام الطريقة التقليدية بأقلام الرصاص والورق؛ حيث يستخدم الفنانون الرقميون الأجهزة اللوحية والحواسيب إلى جانب جهازٍ مثل الماوس أو القلم وذُكرت عدّة محاور في هذه الدورة منها الأدوات المستخدمة وتوضيح الفروقات بين أنواع الرسم.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 col-11 p-0 col-md-5 col-lg-3 offset-md-1" style="min-height: 455px" dir="rtl">
+          <img src="Images/Session11.jpg" class="card-img-top">
+          <div class="card-body d-flex">
+            <h6 class="names align-self-end">الأسس الأكاديمية وأهميتها في بيئة العمل </h6>
+          </div>
+          
+          <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSeven">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      <div class="col-5"></div>
+                    </button>
+                </h2>
+            <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" dir="rtl">
+                <p class="p-2">الحديث عن طرق المذاكره الفعاله اللتي تساعد الطلبه في مسيرتهم الاكاديميه, والمهارات الشخصيه والتخصصيه, والمراجع التي تفيد الطلبه في دراستهم وكيفية التحضير لاختبار الهيئه السعوديه للتخصصات الصحيه لتأسيس الطلبة أكاديميًا.  </p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3" style="min-height: 455px" dir="rtl">
+          <img src="Images/Session12.jpg" class="card-img-top">
+          <div class="card-body d-flex">
+            <h6 class="names align-self-end">استراتيجيات التعامل مع ذوي إضطراب التوحد بالمستشفى</h6>
+          </div>
+          
+          <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      <div class="col-5"></div>
+                    </button>
+                </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" dir="rtl">
+                <p class="p-2">دورة تثقيفية تتمحور حول اضطراب التوحد وكيفية رفع الوعي العام بخصوص ذوي اضطراب للتوحد وتوضيح أساليب التعامل معهم .</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <div class="card mb-md-auto mb-3 mb-lg-3 mt-5 p-0 col-11 col-md-5 col-lg-3 offset-lg-8" style="min-height: 455px" dir="rtl">
+          <img src="Images/Session13.jpg" class="card-img-top">
+          <div class="card-body d-flex">
+            <h6 class="names align-self-end">مهارات أكاديمية في مسيرة طلبة التمريض</h6>
+          </div>
+          
+          <div class="dropdown-divider mb-0 mt-0 pt-0"></div>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-heading8">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapse8">
+                      <div class="col-5"></div>
+                    </button>
+                </h2>
+            <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body" dir="rtl">
+                <p class="p-2">تثقيف طلبة التمريض بأهم المهارات الأكاديمية لخلق نخبة من الممرضين الواعين.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
+         </div>
+       </div>
+    
+    </main>
+    <!------------------------->
+
+    <footer class="footer footer-default pb-2">
+      <div class="container d-flex col-6 col-md-3 col-lg-3 col-xl-2 col-sm-4 justify-content-between justify-content-md-evenly">
+        <a href="https://twitter.com/NursingClub"><img src="Images/twitter.png" class="icons"></a>
+        <a href="mailto:Nursingclubgirls@gmail.com"><img src="Images/gmail.png" class="icons"></a>
+        <a href="https://story.snapchat.com/@NursingClub"><img src="Images/snapchat.png" class="icons"></a>
+        <a href="https://t.me/nursingclub_ksu"><img src="Images/telegram.png" class="icons"></a>
+        <a href="#"><img src="Images/youtube.png" class="icons"></a>
+        <a href="https://www.instagram.com/nursingclub/"><img src="Images/instagram.png" class="icons"></a>
+      </div>
+  </footer>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</html>
